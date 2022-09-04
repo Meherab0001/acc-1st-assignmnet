@@ -19,5 +19,5 @@ module.exports.saveAuser = (req, res) => {
     id && gender && name && contact && address && photoUrl ?
         users.push(data) && res.send(users)
         :
-        res.send('Invalid data,plesse  input valid data')
+        res.send('Invalid Data,Input valid data')
 }
