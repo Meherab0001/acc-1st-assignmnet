@@ -45,3 +45,14 @@ module.exports.updateAuser = (req, res) => {
         res.send(selected)
     }
 }
+
+// 5. Delete  user
+module.exports.deleteAuser = (req, res) => {
+    const Id = req.params.id;
+    const data = users.findIndex(user => user.id === Number(Id));
+    data === -1
+    ?
+    res.send("User not Found")
+        :
+        users.splice(data, 1) && res.send(users)
+}
